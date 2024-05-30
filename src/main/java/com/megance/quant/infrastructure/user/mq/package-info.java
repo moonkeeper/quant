@@ -1,0 +1,1 @@
+package com.megance.quant.infrastructure.user.mq;

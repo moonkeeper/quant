@@ -1,0 +1,1 @@
+package com.megance.quant.application.user.request;
