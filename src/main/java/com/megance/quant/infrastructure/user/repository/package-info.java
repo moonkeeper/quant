@@ -1,1 +1,0 @@
-package com.megance.quant.infrastructure.user.repository;
