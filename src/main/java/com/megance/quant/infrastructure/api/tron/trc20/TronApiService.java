@@ -33,7 +33,7 @@ public class TronApiService {
 
     public ApiWrapper getApiWrapper(String hexPrivateKey) {
         if (tronServiceConfig.getTronDomainOnline()) {
-            return ApiWrapper.ofMainnet(hexPrivateKey, "68aea214-f593-4946-8cb2-c5ecb7e9e67f");
+            return ApiWrapper.ofMainnet(hexPrivateKey, "7ef3be7e-4f98-4524-aa7c-8fca96144deb");
         } else {
             return ApiWrapper.ofShasta(hexPrivateKey);
         }
