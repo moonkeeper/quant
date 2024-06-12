@@ -1,4 +1,8 @@
-package com.megance.quant.infrastructure.mapper.po;
+/*
+ * Copyright 2024  megance-quant , Inc. All rights reserved.
+ */
+
+package com.megance.quant.infrastructure.mapper.base.po;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
