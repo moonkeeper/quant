@@ -47,6 +47,9 @@ jwt:
   secure-key: xxx
   expire-time: 86400000
 
+swagger:
+  enable: true
+
 
 tron:
   config:

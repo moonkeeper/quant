@@ -5,8 +5,8 @@
 package com.megance.quant.app.client.controller;
 
 import com.megance.quant.app.common.component.authorization.JwtAuthenticationResponse;
-import com.megance.quant.app.common.component.authorization.JwtTokenProvider;
 import com.megance.quant.application.user.request.UserReq;
+import com.megance.quant.infrastructure.component.jwt.JwtTokenProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -16,6 +16,8 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
 
 /**
  * @program: quant
@@ -29,7 +31,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class AuthController {
     @Autowired
     private JwtTokenProvider jwtTokenProvider;
-    @Autowired
+    @Resource
     private AuthenticationManager authenticationManager;
 
     @PostMapping("/auth/login")

@@ -2,7 +2,7 @@
  * Copyright 2024  megance-quant , Inc. All rights reserved.
  */
 
-package com.megance.quant.app.common.component.authorization;
+package com.megance.quant.infrastructure.component.jwt;
 
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;

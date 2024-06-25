@@ -4,6 +4,7 @@
 
 package com.megance.quant.app.common.component.authorization;
 
+import com.megance.quant.infrastructure.component.jwt.JwtTokenProvider;
 import org.springframework.security.config.annotation.SecurityConfigurerAdapter;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.web.DefaultSecurityFilterChain;
