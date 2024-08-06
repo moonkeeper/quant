@@ -24,6 +24,8 @@ public class UserProcessor {
     @Resource
     private UserDomainService userDomainService;
     public ApiResult<?> register(RegisterReq registerReq) {
+        registerReq.paramValidation();
+
 
         return null;
     }
