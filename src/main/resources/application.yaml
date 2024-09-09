@@ -50,6 +50,15 @@ jwt:
 swagger:
   enable: true
 
+async:
+  executor:
+    thread:
+      core_pool_size: 5
+      max_pool_size: 5
+      queue_capacity: 100
+      name:
+        prefix: async-service-
+
 
 tron:
   config:

@@ -46,6 +46,10 @@ public class RegisterReq implements Serializable {
     @NotBlank(message = "用户手机号不能为空")
     private String phone;
 
+    @ApiModelProperty("邀请码")
+    @NotBlank(message = "邀请码不能为空")
+    private String invitedCode;
+
     /**
      * 参数校验
      */

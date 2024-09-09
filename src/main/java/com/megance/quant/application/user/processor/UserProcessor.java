@@ -25,8 +25,11 @@ public class UserProcessor {
     private UserDomainService userDomainService;
     public ApiResult<?> register(RegisterReq registerReq) {
         registerReq.paramValidation();
-
-
+        /*
+        1. 创建系统C端用户账号
+        2. 异步创建tron usdt 地址 并创建账户钱包信息
+        3. 生成 并缓存 jwt token
+         */
         return null;
     }
 }

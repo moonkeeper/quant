@@ -5,9 +5,14 @@
 package com.megance.quant.domain.user.service;
 
 import com.megance.quant.domain.user.model.UserModel;
+import com.megance.quant.domain.user.model.UserQueryModel;
 import com.megance.quant.infrastructure.mapper.user.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.Collections;
+import java.util.List;
 
 /**
  * @program: quant
@@ -23,8 +28,15 @@ public class UserDomainServiceImpl implements UserDomainService{
     @Autowired
     private UserMapper userMapper;
 
+    @Transactional(rollbackFor = Exception.class)
     @Override
     public UserModel createUser(UserModel user) {
+        /*
+           1. 邀请人账户是否存在 invitecode 唯一 , 状态是否正常
+           2. 创建账户是否存在 email 唯一
+           3. 构建当前注册人信息 包括邀请码
+         */
+
         return userMapper.insert(null) > 0 ? user : null;
     }
 
@@ -56,5 +68,10 @@ public class UserDomainServiceImpl implements UserDomainService{
     @Override
     public UserModel getUserByUsernameAndPassword(String username, String password) {
         return null;
+    }
+
+    @Override
+    public List<UserModel> getUsersByQueryCondition(UserQueryModel query) {
+        return Collections.emptyList();
     }
 }
